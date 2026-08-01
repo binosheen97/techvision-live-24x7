@@ -1,0 +1,44 @@
+[
+  {
+    "category": "🤖 BREAKING AI NEWS",
+    "headline": "Artificial Intelligence is transforming every industry.",
+    "summary": "Follow the latest AI breakthroughs, product launches and innovations from around the world.",
+    "image": "images/ai.jpg"
+  },
+  {
+    "category": "🚀 AI TOOL SPOTLIGHT",
+    "headline": "Discover powerful AI tools every day.",
+    "summary": "Explore productivity, coding, image generation and research tools changing the future.",
+    "image": "images/aitool.jpg"
+  },
+  {
+    "category": "💻 GITHUB TRENDING",
+    "headline": "Open-source software continues to grow rapidly.",
+    "summary": "See the most popular GitHub repositories developers are starring today.",
+    "image": "images/github.jpg"
+  },
+  {
+    "category": "📰 TECH HEADLINES",
+    "headline": "Technology never sleeps.",
+    "summary": "Stay informed with important announcements from the technology industry.",
+    "image": "images/technology.jpg"
+  },
+  {
+    "category": "🌍 CYBER SECURITY",
+    "headline": "Protect your digital identity.",
+    "summary": "Learn about the latest cyber security awareness and online safety tips.",
+    "image": "images/security.jpg"
+  },
+  {
+    "category": "💡 PROGRAMMING TIP",
+    "headline": "Write code for humans first.",
+    "summary": "Readable code is easier to maintain than clever code.",
+    "image": "images/programming.jpg"
+  },
+  {
+    "category": "🧠 TECH FACT",
+    "headline": "The first website is still online today.",
+    "summary": "Created by Tim Berners-Lee in 1991, it introduced the World Wide Web.",
+    "image": "images/history.jpg"
+  }
+]
