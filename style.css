@@ -1,0 +1,226 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#050816;
+    color:#ffffff;
+    overflow:hidden;
+}
+
+/* Background */
+
+#background{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#1d4ed8,#050816 60%);
+    z-index:-1;
+}
+
+/* Header */
+
+header{
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+    background:rgba(0,0,0,.45);
+
+    border-bottom:2px solid #00d9ff;
+
+}
+
+#logo{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#00e5ff;
+
+    letter-spacing:2px;
+
+}
+
+#clock{
+
+    font-size:26px;
+
+    font-weight:bold;
+
+}
+
+/* Main */
+
+main{
+
+    height:calc(100vh - 160px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+#main-card{
+
+    width:90%;
+
+    max-width:1300px;
+
+    background:rgba(255,255,255,.06);
+
+    border:2px solid #00d9ff;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(12px);
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 0 35px rgba(0,217,255,.35);
+
+}
+
+/* Category */
+
+#category{
+
+    display:inline-block;
+
+    background:#ff0033;
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
+    animation:pulse 2s infinite;
+
+}
+
+/* Headline */
+
+#headline{
+
+    font-size:52px;
+
+    font-weight:bold;
+
+    line-height:1.3;
+
+    margin-bottom:30px;
+
+}
+
+/* Summary */
+
+#summary{
+
+    font-size:28px;
+
+    color:#d7d7d7;
+
+    line-height:1.8;
+
+}
+
+/* Footer */
+
+footer{
+
+    position:fixed;
+
+    bottom:0;
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#d9002b;
+
+}
+
+#ticker{
+
+    white-space:nowrap;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    padding-left:100%;
+
+    animation:ticker 25s linear infinite;
+
+}
+
+/* Animations */
+
+@keyframes ticker{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-200%);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
