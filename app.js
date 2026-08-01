@@ -1,128 +1,173 @@
-// ----------------------------
+// ===============================
 // TECHVISION LIVE 24x7
-// ----------------------------
+// Version 1.0
+// ===============================
 
-// Live Clock
-function updateClock() {
+// ---------- LIVE CLOCK ----------
 
-    const now = new Date();
+function updateClock(){
 
-    const options = {
-        weekday: "short",
-        year: "numeric",
-        month: "short",
-        day: "numeric"
-    };
+const now=new Date();
 
-    const date = now.toLocaleDateString("en-US", options);
+document.getElementById("clock").innerHTML=
 
-    const time = now.toLocaleTimeString("en-US", {
-        hour12: true
-    });
+now.toLocaleDateString("en-US",{
 
-    document.getElementById("clock").innerHTML =
-        date + " | " + time;
+weekday:"short",
+
+day:"2-digit",
+
+month:"short",
+
+year:"numeric"
+
+})
+
++" | "+
+
+now.toLocaleTimeString("en-US");
 
 }
 
-setInterval(updateClock, 1000);
+setInterval(updateClock,1000);
 
 updateClock();
 
 
-// ----------------------------
-// Broadcast Playlist
-// ----------------------------
+// ---------- TV PLAYLIST ----------
 
-const broadcast = [
+const scenes=[
 
 {
+
 category:"🤖 BREAKING AI NEWS",
-headline:"OpenAI, Google and Microsoft continue accelerating AI innovation.",
-summary:"Stay updated with the latest developments in Artificial Intelligence from around the world."
+
+headline:"Artificial Intelligence is transforming every industry.",
+
+summary:"Follow the latest AI breakthroughs, product launches and technology innovations from around the world.",
+
+image:"https://picsum.photos/seed/ai/900/700"
+
 },
 
 {
-category:"🚀 AI TOOL SPOTLIGHT",
-headline:"Discover a new AI tool every minute.",
-summary:"Learn about productivity, coding, image generation, automation and research tools."
+
+category:"🚀 AI TOOL OF THE HOUR",
+
+headline:"Discover powerful AI tools for everyday productivity.",
+
+summary:"New AI tools help developers, students and businesses work smarter.",
+
+image:"https://picsum.photos/seed/tools/900/700"
+
 },
 
 {
+
 category:"💻 GITHUB TRENDING",
-headline:"Explore the most popular open-source repositories.",
-summary:"Trending developer projects updated regularly."
+
+headline:"Open Source projects are changing the future.",
+
+summary:"Explore trending repositories created by developers across the globe.",
+
+image:"https://picsum.photos/seed/github/900/700"
+
 },
 
 {
-category:"📰 TECH HEADLINES",
-headline:"Technology changes every day.",
-summary:"Major announcements from the technology industry appear here."
+
+category:"📰 TECHNOLOGY NEWS",
+
+headline:"Technology never sleeps.",
+
+summary:"Stay informed with important announcements from the technology industry.",
+
+image:"https://picsum.photos/seed/news/900/700"
+
 },
 
 {
-category:"💡 PROGRAMMING TIP",
-headline:"Write clean code. Keep functions small.",
-summary:"Readable code is easier to maintain than clever code."
-},
 
-{
-category:"🧠 TECH FACT",
-headline:"The first computer bug was an actual moth.",
-summary:"Engineers found a moth inside a relay in 1947 and documented it."
-},
-
-{
 category:"🌍 CYBER SECURITY",
-headline:"Always enable Multi-Factor Authentication.",
-summary:"One of the easiest ways to improve online security."
+
+headline:"Protect your digital identity.",
+
+summary:"Cyber security awareness helps keep your accounts and data safe.",
+
+image:"https://picsum.photos/seed/security/900/700"
+
+},
+
+{
+
+category:"💡 PROGRAMMING TIP",
+
+headline:"Write code for humans first.",
+
+summary:"Readable code is easier to maintain, debug and improve over time.",
+
+image:"https://picsum.photos/seed/programming/900/700"
+
+},
+
+{
+
+category:"🧠 TECH FACT",
+
+headline:"The first website is still online today.",
+
+summary:"Created by Tim Berners-Lee in 1991, it explained the World Wide Web project.",
+
+image:"https://picsum.photos/seed/history/900/700"
+
 }
 
 ];
 
-let current = 0;
+let currentScene=0;
 
-function nextBroadcast(){
+function changeScene(){
 
-    document.getElementById("category").innerHTML =
-        broadcast[current].category;
+const scene=scenes[currentScene];
 
-    document.getElementById("headline").innerHTML =
-        broadcast[current].headline;
+document.getElementById("category").innerHTML=scene.category;
 
-    document.getElementById("summary").innerHTML =
-        broadcast[current].summary;
+document.getElementById("headline").innerHTML=scene.headline;
 
-    current++;
+document.getElementById("summary").innerHTML=scene.summary;
 
-    if(current >= broadcast.length){
+document.getElementById("topicImage").src=scene.image;
 
-        current = 0;
+currentScene++;
 
-    }
+if(currentScene>=scenes.length){
+
+currentScene=0;
 
 }
 
-setInterval(nextBroadcast,15000);
+}
 
-nextBroadcast();
+changeScene();
+
+setInterval(changeScene,15000);
 
 
-// ----------------------------
-// Breaking News Ticker
-// ----------------------------
+// ---------- BREAKING NEWS ----------
 
-const tickerMessages=[
+const ticker=[
 
-"🔴 Welcome to TechVision Live 24x7",
+"🔴 Welcome to TECHVISION LIVE 24x7",
 
-"🤖 AI is transforming every industry.",
+"🤖 Artificial Intelligence continues to reshape industries worldwide.",
 
-"💻 Learn something new every day.",
+"💻 Open Source software powers millions of applications every day.",
 
-"🚀 Stay tuned for live technology updates.",
+"🚀 Technology evolves faster than ever before.",
 
-"🌍 Thank you for watching."
+"🌍 Thank you for watching TECHVISION LIVE.",
+
+"📡 More exciting features are coming soon."
 
 ];
 
@@ -130,19 +175,18 @@ let tickerIndex=0;
 
 function updateTicker(){
 
-    document.getElementById("ticker").innerHTML=
-    tickerMessages[tickerIndex];
+document.getElementById("ticker").innerHTML=ticker[tickerIndex];
 
-    tickerIndex++;
+tickerIndex++;
 
-    if(tickerIndex>=tickerMessages.length){
+if(tickerIndex>=ticker.length){
 
-        tickerIndex=0;
-
-    }
+tickerIndex=0;
 
 }
 
-setInterval(updateTicker,8000);
+}
 
 updateTicker();
+
+setInterval(updateTicker,8000);
