@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ChatGPT",
+    "company": "OpenAI",
+    "description": "AI assistant for writing, coding, research and productivity.",
+    "image": "images/chatgpt.jpg"
+  },
+  {
+    "name": "Claude",
+    "company": "Anthropic",
+    "description": "Large language model focused on reasoning and long conversations.",
+    "image": "images/claude.jpg"
+  },
+  {
+    "name": "Gemini",
+    "company": "Google",
+    "description": "Google's multimodal AI assistant integrated across Google products.",
+    "image": "images/gemini.jpg"
+  },
+  {
+    "name": "GitHub Copilot",
+    "company": "GitHub",
+    "description": "AI coding assistant that helps developers write code faster.",
+    "image": "images/copilot.jpg"
+  },
+  {
+    "name": "Perplexity",
+    "company": "Perplexity AI",
+    "description": "AI-powered search engine with cited answers.",
+    "image": "images/perplexity.jpg"
+  }
+]
